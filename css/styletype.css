@@ -1,238 +1,222 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
-
-/* Makes padding easier.allows us to include the padding and border 
+            @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+            /* Makes padding easier.allows us to include the padding and border 
 in an element's total width and height */
-
-* {
-    box-sizing: border-box;
-}
-
-
-/* aligning all the text in the body to be centered */
-
-body {
-    margin: 0;
-    font-family: 'Railway', 'sans-sarif';
-    text-align: center;
-}
-
-
-/* -----Image. Makes sure the image reaches only the max of the 
+            
+            * {
+                box-sizing: border-box;
+            }
+            /* aligning all the text in the body to be centered */
+            
+            body {
+                margin: 0;
+                font-family: 'Railway', 'sans-sarif';
+                text-align: center;
+            }
+            /* -----Image. Makes sure the image reaches only the max of the 
 device screen -------  */
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/*Container for mobile purposes 
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            /*Container for mobile purposes 
     Stops text from touching side of the screen */
-
-.container {
-    width: 95%;
-    max-width: 70em;
-    margin: 0 auto;
-}
-
-
-/* -----Typography -------  */
-
-.h1 {
-    font-weight: 300;
-    font-size: 1.7rem;
-    margin-top: 0;
-}
-
-.title {
-    font-size: 2.2rem;
-    margin-bottom: 1.5em;
-    font-weight: 900;
-    margin-top: 1em;
-}
-
-.title span {
-    font-weight: 300;
-    display: block;
-    font-size: .9em;
-}
-
-@media(min-width:60rem) {
-    p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }
-    .title {
-        font-size: 3.5rem;
-    }
-}
-
-
-/*   Buttons */
-
-.button {
-    /* avoids text from mushing together */
-    display: inline-block;
-    font-size: 1.15rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-width: 2px;
-    border-style: solid;
-    padding: .5em 1.75em;
-}
-
-@media(min-width:60rem) {
-    .button {
-        font-size: 1.5rem;
-    }
-}
-
-
-/* The inside of the button context */
-
-.button-accent {
-    color: #00ff6c;
-    border-color: #00ff6c;
-}
-
-.button-accent:hover,
-.button-accent:focus {
-    background: #00ff6c;
-    color: #232323;
-}
-
-
-/* -----Header-------  */
-
-header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 1em;
-}
-
-
-/* ------Navigation bar ----- */
-
-
-/* unordered list styling */
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin: 1em;
-}
-
-
-/* actions that are going to happen when you click or haver over the nav buttons */
-
-nav a {
-    font-weight: 900;
-    text-decoration: none;
-    test-transform: uppercase;
-    font-size: .9rem;
-    padding: .5em;
-    color: #fff;
-}
-
-nav a :hover,
-nav a :focus {
-    color: #DDD;
-}
-
-@media(min-width:60rem) {
-    .logo {
-        float: left;
-    }
-    nav {
-        float: right;
-    }
-}
-
-
-/*  ---- Home Hero -----*/
-
-.home-hero {
-    background-image: url(../img/hero-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 10em 0;
-    color: #fff;
-}
-
-@media(min-width:60rem) {
-    .home-hero {
-        /* vh is view port height . will take up the full screen of your 
+            
+            .container {
+                width: 95%;
+                max-width: 70em;
+                margin: 0 auto;
+            }
+            /* -----Typography -------  */
+            
+            .h1 {
+                font-weight: 300;
+                font-size: 1.7rem;
+                margin-top: 0;
+            }
+            
+            p {
+                margin-top: 0;
+                line-height: 1.5;
+            }
+            
+            p:last-of-type {
+                margin-bottom: 0;
+            }
+            
+            .title {
+                font-size: 2.2rem;
+                margin-bottom: 1.5em;
+                font-weight: 900;
+                margin-top: 1em;
+            }
+            
+            .title span {
+                font-weight: 300;
+                display: block;
+                font-size: .9em;
+            }
+            
+            @media(min-width:60rem) {
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                }
+                .title {
+                    font-size: 3.5rem;
+                }
+            }
+            /*   Buttons */
+            
+            .button {
+                /* avoids text from mushing together */
+                display: inline-block;
+                font-size: 1.15rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-width: 2px;
+                border-style: solid;
+                padding: .5em 1.75em;
+            }
+            
+            @media(min-width: 60rem) {
+                .button {
+                    font-size: 1.5rem;
+                }
+            }
+            /* The inside of the button context */
+            
+            .button-accent {
+                color: #00ff6c;
+                border-color: #00ff6ab7;
+            }
+            
+            .button-accent:hover,
+            .button-accent:focus {
+                background: #00ff6c;
+                color: #232323;
+            }
+            /* -----Header-------  */
+            
+            header {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 1em;
+            }
+            /* ------Navigation bar ----- */
+            /* unordered list styling */
+            
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            
+            nav li {
+                display: inline-block;
+                margin: 1em;
+            }
+            /* actions that are going to happen when you click or haver over the nav buttons */
+            
+            nav a {
+                font-weight: 900;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: .9rem;
+                padding: .5em;
+                color: #fff;
+            }
+            
+            nav a :hover,
+            nav a :focus {
+                color: #DDD;
+            }
+            
+            @media(min-width:60rem) {
+                .logo {
+                    float: left;
+                }
+                nav {
+                    float: right;
+                }
+            }
+            /*  ---- Home Hero -----*/
+            
+            .home-hero {
+                background-image: url(../img/hero-bg.jpg);
+                background-size: cover;
+                background-position: center;
+                padding: 10em 0;
+                color: #fff;
+            }
+            
+            @media(min-width:60rem) {
+                .home-hero {
+                    /* vh is view port height . will take up the full screen of your 
         browser , have to scroll to view new content  */
-        height: 100vh;
-        padding-top: 35vh;
-    }
-}
-
-
-/*---Hero Home----*/
-
-.home-about-textbox {
-    background-color: #232323;
-    padding: 4em;
-    width: 100vw;
-    margin-left: -2.5%;
-    /*borders that can be offset to the side */
-    outline: 2px solid #00ff6c;
-    outline-offset: -2.5em;
-    color: #f7f8f7;
-    position: relative;
-}
-
-.home-about-textbox h1 {
-    color: #00ff6c;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: .75em;
-    background: #232323;
-    padding: 0.145em;
-}
-
-@media (min-width: 25rem) {
-    h1 {
-        font-size: 2rem;
-    }
-    .home-about-textbox {
-        padding: 5.5em;
-    }
-    .home-about-textbox h1 {
-        top: .6em;
-        padding: 0 .325em;
-    }
-}
-
-@media (min-width: 60rem) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    .home-about {
-        background-image: url(../img/who-we-are.jpg);
-        background-repeat: no-repeat;
-        padding-bottom: 10em;
-    }
-    .home-about-textbox {
-        width: 50%;
-        padding: 7em;
-        outline-offset: -3.75em;
-        margin-left: -2.5%;
-        top: -5em;
-        text-align: left;
-        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
-    }
-    .home-about-textbox h1 {
-        top: .75em;
-        left: 6rem;
-        transform: translateX(0);
-    }
-}
+                    height: 100vh;
+                    padding-top: 35vh;
+                }
+            }
+            /*---Hero Home----*/
+            
+            .home-about-textbox {
+                background-color: #232323;
+                padding: 4em;
+                width: 100vw;
+                margin-left: -2.5%;
+                /*borders that can be offset to the side */
+                outline: 2px solid #00ff6c;
+                outline-offset: -2.5em;
+                color: #f7f8f7;
+                position: relative;
+            }
+            
+            .home-about-textbox h1 {
+                color: #00ff6c;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: .75em;
+                background: #232323;
+                padding: 0.145em;
+            }
+            
+            @media (min-width: 25rem) {
+                h1 {
+                    font-size: 2.5rem;
+                }
+                .home-about-textbox {
+                    padding: 5.5em;
+                }
+                .home-about-textbox h1 {
+                    top: .6em;
+                    padding: 0 .325em;
+                }
+            }
+            
+            @media (min-width: 60rem) {
+                h1 {
+                    font-size: 2.5rem;
+                }
+                .home-about {
+                    background-image: url(../img/who-we-are.jpg);
+                    background-repeat: no-repeat;
+                    padding-bottom: 10em;
+                }
+                .home-about-textbox {
+                    width: 50%;
+                    padding: 7em;
+                    outline-offset: -3.75em;
+                    margin-left: -2.5%;
+                    top: -5em;
+                    text-align: left;
+                    box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+                }
+                .home-about-textbox h1 {
+                    top: .75em;
+                    left: 6rem;
+                    transform: translateX(0);
+                }
+            }
