@@ -4,13 +4,14 @@ in an element's total width and height */
             
             * {
                 box-sizing: border-box;
+                /*--- Transition speeds for the whole site   ----*/
                 transition: all ease-in-out 250ms;
             }
             /* aligning all the text in the body to be centered */
             
             body {
                 margin: 0;
-                font-family: 'Railway', sans-serif;
+                font-family: 'Raleway', sans-serif;
                 text-align: center;
             }
             /* -----Image. Makes sure the image reaches only the max of the 
@@ -30,7 +31,7 @@ device screen -------  */
             }
             /* -----Typography -------  */
             
-            .h1 {
+            h1 {
                 font-weight: 300;
                 font-size: 1.7rem;
                 margin-top: 0;
@@ -106,6 +107,20 @@ device screen -------  */
                 background: #00ff6c;
                 color: #232323;
             }
+            .button-dark:hover,
+            .button-dark:focus {
+                background: #232323;
+                color: #00ff6c;
+            }
+
+                /* Parallax
+            =================== */
+
+            .parallax--bg,
+            .parallax--box {
+                transition: initial;
+            }
+
             /* -----Header-------  */
             
             header {
@@ -229,7 +244,8 @@ device screen -------  */
                     left: 6rem;
                     transform: translateX(0);
                 }
-            
+            }
+             
             /*--- Portfolio ----*/
             
             .portfolio {
@@ -242,18 +258,20 @@ device screen -------  */
                 position: relative;
               
             }
+            /*--- Removes white spots on edge of images while in div   ----*/
             .port-item img {
                 display: block;
             }
             .port-desc{
                 position: absolute;
+                /*--- Puts the text on top  ----*/
                 z-index: 100;
-                bottom:2em;
-                left:3em;
-                right:3em;
+                bottom:0em;
+                left:0em;
+                right:0em;
                 color:white;
-                background: rgba(0, 0, 0, .75);
-                padding:2em;
+                background: rgba(0, 0, 0, .6);
+                padding:1em;
             }
             .port-desc p {
                 margin: 1em;
@@ -265,14 +283,16 @@ device screen -------  */
                     float: left;
                 }
             }
-            
+            /*--- Breaks into grid of 3 when on large screen ----*/
             @media (min-width: 60rem) {
                 .port-item {
                     width: 33.3333334%;
+                    /*--- Hides the Y grids to have hover effect   ----*/
                     overflow: hidden;
                 }
             
                 .port-desc {
+                    /*--- Y ax moves everything down to hide   ----*/
                     transform: translateY(150%);
                 }
             
