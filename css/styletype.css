@@ -29,6 +29,54 @@ device screen -------  */
                 max-width: 70em;
                 margin: 0 auto;
             }
+
+            .clearfix::after,
+            section::after,
+            footer::after{
+                content:'';
+                display:block;
+                clear:both;
+            }
+            /*column system for the footer and rest of the page  */
+            [class^=col-]{
+                width:100%;
+                margin-top: 1em;
+            }
+            [class^=col-]:first-child{
+                margin-top:0;
+                        }
+            
+            .col-1{
+                width:33.3333334;
+                float:left;
+            }
+
+
+
+            @media(min-width:40rem){
+                
+                [class^=col-]{
+                float:left;
+                padding:0 .5em;
+                margin-top:0;
+                }
+                    [class^=col-]:first-child{
+                        padding-left:0;
+        
+                    }
+                    
+                    [class^=col-]:last-child{
+                        padding-right:0;
+        
+                }
+            .col-3{
+                width:50%;
+            }
+
+            .col-1{
+                width:16.6666%;
+            }
+        }
             /* -----Typography -------  */
             
             h1 {
@@ -61,7 +109,12 @@ device screen -------  */
             .title-cta {
                 margin: 0 0 .5em;
             }
-            
+            /* Removes bullets from list and gives new formating to UL*/
+            .unstyled-list{
+                margin:0;
+                padding:0;
+                list-style-type: none;
+            }
             
             @media(min-width:60rem) {
                 p {
@@ -95,7 +148,7 @@ device screen -------  */
                 font-size: .7rem;
                 font-weight: 700;
             }
-            /* The inside of the button context */
+            /* The inside of the button context and hover effect */
             
             .button-accent {
                 color: #00ff6c;
@@ -107,6 +160,11 @@ device screen -------  */
                 background: #00ff6c;
                 color: #232323;
             }
+            .button-dark{
+                color:#232323;
+                border-color:#232323;
+            }
+            /*bottom button to a different colour then the rest with hover effect */
             .button-dark:hover,
             .button-dark:focus {
                 background: #232323;
@@ -301,3 +359,18 @@ device screen -------  */
                 }
             }
             
+
+             /*--- CTA = Call to Action ----*/
+                .cta{
+                    background-color:#02f166;
+                    padding: 5em 0; 
+
+                }
+
+                /*Footer end */
+                footer {
+                    background: #232323;
+                    color:rgb(255, 255, 255);
+                    text-align: left;
+                    padding: 5em 0;
+                }
